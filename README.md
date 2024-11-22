@@ -9,8 +9,7 @@ Preguntas propuestas:
 
 *Relación de la edad con respecto al comportamiento con los humanos. Tipo de grafico a generar: Grafico de barras o heatmap. 
 
-*Relación del color con respecto al area donde han sido vistas. Tipo de grafico: 
-Buscar un mapa de NY. 
+*Relación del color con respecto al area donde han sido vistas. Tipo de grafico: Mapa de NY con puntos de colores.
 
 *Cómo se comportan las ardillas a lo largo de los meses. Su comportamiento cambia de acuerdo a la epoca del año? Tipo de grafico: Heatmap (?)
 
