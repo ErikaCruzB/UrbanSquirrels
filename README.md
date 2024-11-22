@@ -16,6 +16,9 @@ Preguntas propuestas:
 *Cómo se comportan las ardillas a lo largo de los meses. Su comportamiento cambia de acuerdo a la epoca del año? Tipo de grafico: 
 
 
+
+
+
 Genera un script completo que nos conteste las preguntas realizadas y nos de graficas de cada uno.
 
 NOTA: No olvides agregar la programacion defensiva y un poco de todo lo visto en clase (Manipulacion de datos, funciones, BUENAS PRACTICAS, ggplot2 o Complexheatmap).
