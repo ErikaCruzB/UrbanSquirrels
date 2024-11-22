@@ -1,7 +1,7 @@
 # SquirrelSearchNYC
 Fechas: 
 
-Martes 26 de noviembre- Primera revisión. 
+Martes 26 de noviembre- Primera revisión. (3 PM)
 
 Miercoles 27 de noviembre - tener listo el script.
 
