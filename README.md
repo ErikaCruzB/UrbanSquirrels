@@ -1,5 +1,8 @@
 # SquirrelSearchNYC
+Fechas: 
 
+Miercoles 27 de noviembre - tener listo el script.
+Miercoles 3 de diciembre - Quarto y la presentación.
 
 Paso 1: Seleccionar uno de los Datasets precargados en R o los que son propios de los paquetes.
 
