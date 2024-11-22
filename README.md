@@ -25,3 +25,4 @@ Genera una exposicion breve (empleando Xaringan o Quarto en R) de 15 min en tota
 Sube todo a Github, el repositorio debe ser publico y debe contener tu reporte y presentacion. NO olvides poner tu nombre y la de tu equipo en el README.
 
 Exposicion el 6 de diciembre
+Instrucciones completas: https://eveliacoss.github.io/Defensiva_ggplot2024/Parte5.html
