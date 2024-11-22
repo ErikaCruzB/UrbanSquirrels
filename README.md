@@ -1,7 +1,10 @@
 # SquirrelSearchNYC
 Fechas: 
 
+Martes 26 de noviembre- Primera revisión. 
 Miercoles 27 de noviembre - tener listo el script.
+Viernes 29 de noviembre - Revision 2. 
+Lunes 1 de diciembre- Revisión 3 (quarto y presentación)
 Miercoles 3 de diciembre - Quarto y la presentación.
 
 Paso 1: Seleccionar uno de los Datasets precargados en R o los que son propios de los paquetes.
