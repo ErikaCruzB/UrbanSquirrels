@@ -8,11 +8,11 @@ Dataset elegido: nyc_squirrels <- readr::read_csv("https://raw.githubusercontent
 Paso 2: Analiza los datos y genera 3 preguntas que puedas contestar con las variables que tienes.
 Preguntas propuestas: 
 
-*Relación de la edad con respecto al comportamiento con los humanos. Tipo de grafico a generar: Grafico de barras o heatmap. 
+*Relación de la edad con respecto al comportamiento con los humanos. Tipo de grafico a generar: Grafico de barras o heatmap. (https://r-charts.com/es/ranking/grafico-barras-ggplot2/)
 
 *Relación del color con respecto al area donde han sido vistas. Tipo de grafico: Mapa de NY con puntos de colores. (https://r-charts.com/es/espacial/mapas-ggplot2/)
 
-*Cómo se comportan las ardillas a lo largo de los meses. Su comportamiento cambia de acuerdo a la epoca del año? Tipo de grafico: Heatmap (?)
+*Cómo se comportan las ardillas a lo largo de los meses. Su comportamiento cambia de acuerdo a la epoca del año? Tipo de grafico: Heatmap (?) (https://jokergoo.github.io/ComplexHeatmap-reference/book/)
 
 
 Genera un script completo que nos conteste las preguntas realizadas y nos de graficas de cada uno.
