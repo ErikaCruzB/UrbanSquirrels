@@ -2,6 +2,7 @@
 
 
 Paso 1: Seleccionar uno de los Datasets precargados en R o los que son propios de los paquetes.
+
 Dataset elegido: nyc_squirrels <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-10-29/nyc_squirrels.csv")
 
 Paso 2: Analiza los datos y genera 3 preguntas que puedas contestar con las variables que tienes.
