@@ -29,6 +29,7 @@ Paso 3: Genera un script completo que nos conteste las preguntas realizadas y no
 
 NOTA: No olvides agregar la programacion defensiva y un poco de todo lo visto en clase (Manipulacion de datos, funciones, BUENAS PRACTICAS, ggplot2 o Complexheatmap).
 NOTA: No olvides que es muy importante documentar todo.
+*(no olvidar poner la documentación roxygen)*
 
 Paso 4: Entregables
 
