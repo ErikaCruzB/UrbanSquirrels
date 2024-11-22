@@ -6,9 +6,10 @@ Dataset elegido: https://github.com/rfordatascience/tidytuesday/tree/master/data
 
 Paso 2: Analiza los datos y genera 3 preguntas que puedas contestar con las variables que tienes.
 Preguntas propuestas: 
---Relación de la edad con respecto al comportamiento con los humanos. Tipo de grafico a generar: Grafico de barras o heatmap. 
---Relación del color con respecto al area donde han sido vistas. Tipo: 
---Relación de la comida con respecto a la zona en la que se alimentan.
+*Relación de la edad con respecto al comportamiento con los humanos. Tipo de grafico a generar: Grafico de barras o heatmap. 
+*Relación del color con respecto al area donde han sido vistas. Tipo de grafico: 
+*Relación de la comida con respecto a la zona en la que se alimentan. Tipo de grafico: 
+*Cómo se comportan las ardillas a lo largo de los meses. Su comportamiento cambia de acuerdo a la epoca del año? Tipo de grafico: 
 
 
 Genera un script completo que nos conteste las preguntas realizadas y nos de graficas de cada uno.
