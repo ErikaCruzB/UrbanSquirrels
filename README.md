@@ -15,12 +15,12 @@ Preguntas propuestas:
 *Cómo se comportan las ardillas a lo largo de los meses. Su comportamiento cambia de acuerdo a la epoca del año? Tipo de grafico: Heatmap (?) (https://jokergoo.github.io/ComplexHeatmap-reference/book/)
 
 
-Genera un script completo que nos conteste las preguntas realizadas y nos de graficas de cada uno.
+Paso 3: Genera un script completo que nos conteste las preguntas realizadas y nos de graficas de cada uno.
 
 NOTA: No olvides agregar la programacion defensiva y un poco de todo lo visto en clase (Manipulacion de datos, funciones, BUENAS PRACTICAS, ggplot2 o Complexheatmap).
 NOTA: No olvides que es muy importante documentar todo.
 
-Entregables:
+Paso 4: Entregables
 
 Crear un reporte o un libro en Rmarkdown o Quarto (entregarlo el 5 de Diciembre antes de las 11 pm hora Ciudad de Mexico).
 
