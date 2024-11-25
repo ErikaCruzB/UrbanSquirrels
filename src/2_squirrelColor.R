@@ -1,9 +1,32 @@
-library(readr)
 library(sf)
+library(data.table)
+library(ggplot2)
+library(leaflet)
+library(time)
 
 #Descargar y cargar datos de ardillas
-nyc_squirrels <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-10-29/nyc_squirrels.csv")
+nyc_squirrels <- fread("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-10-29/nyc_squirrels.csv")
 
-#Descargar datos del mapa
-nyc_map<-read_sf(url("https://github.com/ErikaCruzB/UrbanSquirrels/blob/1d6d645cfc7fd7310fd7d49ecab92de51cc13283/data/NYC_map/ProspectPark.shp"))
+#Descargar y cargar datos del mapa del parque central NY
+url_geojson <- "https://raw.githubusercontent.com/ErikaCruzB/UrbanSquirrels/main/data/NYC_map/CentralPark.geojson"
+nyc_map <- st_read(url_geojson)
+rm(url_geojson)
 
+#filtrar los avistamientos de ardillas de un color
+colorsq<-"Black"
+colorloc<-nyc_squirrels[primary_fur_color == colorsq,list(long,lat,unique_squirrel_id,date)]
+
+#Cambiando formato de la fecha 
+colorloc[,date_r := gsub('^([0-9]{2})([0-9]{2})([0-9]{4})', '\\1-\\2-\\3',as.character(date))]
+
+#Mapa de las ardillas de un color
+pal <- colorFactor(c("black", "brown"), domain = c("black", "Cinnamon"))
+
+leaflet(data=colorloc) %>%
+  addTiles() %>%
+  addCircleMarkers(~long, ~lat, radius = 3,
+                   color = ~pal(colorsq),
+                   popup = ~date_r,
+                   label = ~date_r,
+                   stroke = FALSE, fillOpacity = 0.5) %>%
+  addProviderTiles("Esri.WorldTopoMap")
