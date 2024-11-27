@@ -1,8 +1,8 @@
-#Autores: 
-#Descripción:
-#Fecha: 
+#Autoras: Erika Viridiana Cruz Bonilla y Amairani Cancino Bello
+#Descripción: 
+#Fecha: 26/11/2024
   
-#Datos:   
+#Descarga de Datos:   
 readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-10-29/nyc_squirrels.csv")
 
 ## --Pregunta 1----
