@@ -27,7 +27,7 @@ readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/m
 #' @import dplyr
 #' @import tidyr
 #' @export
-plot_age_vs_behavior <- function(data, behavior = c("running", "chasing", "climbing", "eating")) {
+plot_age_vs_behavior <- function(data, behavior = c("running", "chasing", "climbing", "eating","foraging")) {
   library(ggplot2)
   library(dplyr)
   library(tidyr)
