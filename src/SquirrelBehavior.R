@@ -138,3 +138,34 @@ plot_squirrel_behavior_by_month <- function(data) {
 }
 plot_squirrel_behavior_by_month(nyc_squirrels)
 
+
+#R version 4.4.0 (2024-04-24 ucrt)
+#Platform: x86_64-w64-mingw32/x64
+#Running under: Windows 11 x64 (build 22631)
+
+#Matrix products: default
+
+
+#locale:
+ # [1] LC_COLLATE=Spanish_Mexico.utf8  LC_CTYPE=Spanish_Mexico.utf8    LC_MONETARY=Spanish_Mexico.utf8 LC_NUMERIC=C                   
+#[5] LC_TIME=Spanish_Mexico.utf8    
+
+#time zone: America/Mexico_City
+#tzcode source: internal
+
+#attached base packages:
+ # [1] stats     graphics  grDevices utils     datasets  methods   base     
+
+#other attached packages:
+ # [1] viridis_0.6.5     viridisLite_0.4.2 lubridate_1.9.3   tidyr_1.3.1       dplyr_1.1.4       ggplot2_3.5.1     readr_2.1.5      
+
+#loaded via a namespace (and not attached):
+ # [1] crayon_1.5.3       vctrs_0.6.5        cli_3.6.3          rlang_1.1.4        purrr_1.0.2        generics_0.1.3     labeling_0.4.3    
+#[8] glue_1.7.0         bit_4.5.0          colorspace_2.1-0   gridExtra_2.3      hms_1.1.3          scales_1.3.0       fansi_1.0.6       
+#[15] grid_4.4.0         munsell_0.5.1      tibble_3.2.1       tzdb_0.4.0         lifecycle_1.0.4    compiler_4.4.0     sessioninfo_1.2.2 
+#[22] RColorBrewer_1.1-3 timechange_0.3.0   pkgconfig_2.0.3    rstudioapi_0.17.0  farver_2.1.2       R6_2.5.1           tidyselect_1.2.1  
+#[29] utf8_1.2.4         vroom_1.6.5        pillar_1.9.0       curl_5.2.3         parallel_4.4.0     magrittr_2.0.3     tools_4.4.0       
+#[36] withr_3.0.1        bit64_4.5.2        gtable_0.3.5      
+
+
+
