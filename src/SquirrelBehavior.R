@@ -75,7 +75,7 @@ plot_age_vs_behavior(nyc_squirrels)
 
 
 
-## --Pregunta 2----
+## --Pregunta 3----
 library(dplyr)
 library(tidyr)
 library(ggplot2)
