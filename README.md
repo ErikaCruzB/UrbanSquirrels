@@ -1,4 +1,6 @@
 # SquirrelSearchNYC
+Autoras:
+
 Fechas: 
 
 Martes 26 de noviembre- Primera revisión. (3 PM)
