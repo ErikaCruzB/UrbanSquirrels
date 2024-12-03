@@ -1,0 +1,37 @@
+---
+title: "Squirrels in NYC"
+format: html
+theme: journal
+editor: visual
+author:   
+  - Amairani Cancino  
+  - Erika Cruz
+---
+
+## Resumen
+
+Partiendo de una base de datos de avistamientos de ardillas en el parque Central de Nueva York, realizamos una serie de preguntas acerca de las características de las ardillas observadas.
+
+## Cargar paquetes necesarios
+
+```{r}
+
+```
+
+## Base de datos
+
+La base de datos seleccionada es una recopilación de avistamientos de ardillas llevada a cabo por el proyecto [The Squirrel Census](https://www.thesquirrelcensus.com/) y adaptada por el proyecto de difusión de bases de datos [TidyTuesday](https://github.com/rfordatascience/tidytuesday). Consta de los avistamientos de ardillas en el parque Central de Nueva York realizadas por voluntarios durante Octubre 2018, detallando características físicas de las ardillas así como del comportamientos de éstas al momento del avistamiento.
+
+```{r}
+
+```
+
+## Preguntas planteadas
+
+A partir de esta base de datos, nos planteamos las siguientes preguntas
+
+**Pregunta 1**: ¿Existe alguna diferencia entre el comportamiento hacia los humanos de ardillas juveniles en contraste al de ardillas adultas?
+
+**Pregunta 2:** ¿Cuál es la distribución de las ardillas dentro del parque según el color de su pelaje?
+
+**Pregunta 3**: ¿Cómo se comportan las ardillas a lo largo del mes de observación?
