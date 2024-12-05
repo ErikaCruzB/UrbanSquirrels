@@ -22,14 +22,14 @@ nyc_squirrels <- fread("https://raw.githubusercontent.com/rfordatascience/tidytu
 #' Relación entre la Edad y los Comportamientos de las Ardillas
 #'
 #' Esta función genera un gráfico de barras para visualizar la relación entre la edad de las ardillas 
-#' y su comportamiento con los humanos (ej. correr, trepar, etc.). La función permite elegir el tipo 
+#' y su comportamiento con los humanos (ej. huir). La función permite elegir el tipo 
 #' de comportamiento a analizar y organiza los datos en un formato adecuado para ser graficado.
 #'
 #' @param data Un data frame que contiene los datos de las ardillas. Este data frame debe tener una columna 
 #'             llamada 'age' que indique la edad de la ardilla ('Juvenile' o 'Adult') y columnas adicionales 
-#'             que representen los comportamientos de las ardillas, como 'running', 'chasing', etc.
+#'             que representen los comportamientos de las ardillas.
 #' @param behavior Un vector de caracteres con los nombres de las actividades a analizar (por defecto es 
-#'                 "running", "chasing", "climbing", "eating"). Este parámetro permite seleccionar los 
+#'                 "approaches","indifferent","runs_from"). Este parámetro permite seleccionar los 
 #'                 comportamientos específicos a graficar.
 #'
 #' @return Un gráfico de barras que muestra la relación entre la edad de las ardillas y el comportamiento 
@@ -40,7 +40,7 @@ nyc_squirrels <- fread("https://raw.githubusercontent.com/rfordatascience/tidytu
 #' @import dplyr
 #' @import tidyr
 #' @export
-plot_age_vs_behavior <- function(data, behavior = c("running", "chasing", "climbing", "eating","foraging")) {
+plot_age_vs_behavior <- function(data, behavior = c("approaches","indifferent","runs_from")) {
   # Convertir la columna 'age' en un factor para asegurar que ggplot lo trate como categorías
   data$age <- as.character(data$age)
   data$age[!data$age %in% c('Juvenile', 'Adult')] <- NA
@@ -85,11 +85,30 @@ plot_age_vs_behavior <- function(data, behavior = c("running", "chasing", "climb
 plot_age_vs_behavior(nyc_squirrels)
 
 ##-- Pregunta 2----
-
-#Descargar y cargar datos del mapa del parque central NY
-url_geojson <- "https://raw.githubusercontent.com/ErikaCruzB/UrbanSquirrels/main/data/NYC_map/CentralPark.geojson"
-nyc_map <- st_read(url_geojson)
-rm(url_geojson,installed_packages,packages)
+#' Mapa de Avistamientos de Ardillas por Color
+#'
+#' Esta función genera un mapa interactivo utilizando `leaflet` para visualizar los avistamientos de ardillas
+#' en el Parque Central de Nueva York, filtrados por su color de pelaje. Permite seleccionar un color específico
+#' y presenta la ubicación de los avistamientos junto con la fecha en formato legible.
+#'
+#' @param colorSel Un string que representa el color de las ardillas a visualizar. Debe ser uno de los 
+#'                 siguientes: "Black", "Cinnamon", "Gray" o "Undefined". No distingue entre mayúsculas
+#'                 y minúsculas, pero convierte el texto al formato título internamente.
+#' @param dataset Un data frame que contiene los datos de avistamientos de ardillas. Este data frame 
+#'                debe incluir al menos las siguientes columnas:
+#'                - `primary_fur_color`: Color principal del pelaje de la ardilla.
+#'                - `long` y `lat`: Coordenadas de ubicación de los avistamientos.
+#'                - `unique_squirrel_id`: Identificador único para cada ardilla.
+#'                - `date`: Fecha del avistamiento en formato `MMDDYYYY`.
+#'
+#' @return Un objeto `leaflet` que muestra un mapa interactivo con las ubicaciones de las ardillas
+#'         filtradas por color.
+#'
+#'
+#' @import leaflet
+#' @import data.table
+#' @import stringr
+#' @export
 
 #Cambiar formato de NA en colores
 nyc_squirrels[is.na(primary_fur_color),primary_fur_color := "Undefined"]
@@ -137,19 +156,19 @@ squirrelColorMap("gray",nyc_squirrels)
 
 
 ## --Pregunta 3----
-#' Comportamiento de las Ardillas a lo Largo de los Meses
+#' Comportamiento de las Ardillas a lo Largo de los dias
 #'
 #' Esta función genera un heatmap para visualizar cómo cambia el comportamiento de las ardillas
-#' a lo largo de los meses. La función toma un dataset con información sobre el comportamiento 
+#' a lo largo de los dias. La función toma un dataset con información sobre el comportamiento 
 #' de las ardillas y su fecha de observación, y genera un gráfico que muestra la cantidad de 
-#' observaciones para cada comportamiento en cada mes.
+#' observaciones para cada comportamiento en cada dia.
 #'
 #' @param data Un data frame que contiene los datos de las ardillas. Debe incluir una columna
 #'             de fecha llamada 'date' y columnas para cada tipo de comportamiento de las ardillas 
 #'             (por ejemplo, "running", "chasing", "climbing", "eating").
 #' 
 #' @return Un gráfico de tipo heatmap que muestra la cantidad de veces que cada comportamiento 
-#'         ocurrió en cada mes.
+#'         ocurrió en cada dia.
 #' 
 #' @import ggplot2
 #' @import dplyr
@@ -157,7 +176,7 @@ squirrelColorMap("gray",nyc_squirrels)
 #' @import viridis
 #' @import lubridate
 #' @export
-plot_squirrel_behavior_by_month <- function(data) {
+plot_squirrel_behavior_by_day <- function(data) {
   #Separando la columna date en dia
   data[,day:= substr(date,3,4)]
   
@@ -176,8 +195,8 @@ plot_squirrel_behavior_by_month <- function(data) {
   ggplot(behavior_data, aes(x = day, y = behavior, fill = n)) +
     geom_tile() +  # Crear los cuadros del heatmap
     scale_fill_viridis() +  # Usar la paleta de colores viridis
-    labs(title = "Comportamiento de las Ardillas a lo Largo de los Meses",
-         x = "Mes",
+    labs(title = "Comportamiento de las Ardillas a lo Largo del tiempo",
+         x = "Día",
          y = "Comportamiento",
          fill = "Número de Observaciones") +
     theme_minimal() +
@@ -189,4 +208,4 @@ plot_squirrel_behavior_by_month <- function(data) {
       axis.text = element_text(size = 12)
     )
 }
-plot_squirrel_behavior_by_month(nyc_squirrels)
+plot_squirrel_behavior_by_day(nyc_squirrels)
